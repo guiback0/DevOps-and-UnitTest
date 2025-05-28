@@ -53,6 +53,8 @@ namespace EvaluationSampleCode.UnitTests
         [TestMethod]
         public void CanBeCancelledBy_AvecAutreUtilisateurNonAdmin_RetourneFaux()
         {
+            // Arrange
+            // La réservation a été créée par _utilisateurNormal, on teste avec un autre utilisateur
 
             // Act
             var resultat = _reservation.CanBeCancelledBy(_autreUtilisateur);

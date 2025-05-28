@@ -16,7 +16,7 @@ namespace EvaluationSampleCode.UnitTests
         private Reservation _reservation = null!;
 
         [TestInitialize]
-        public void Init()
+        public void Initialiser()
         {
             _utilisateurNormal = new User { IsAdmin = false };
             _utilisateurAdmin = new User { IsAdmin = true };
@@ -29,6 +29,8 @@ namespace EvaluationSampleCode.UnitTests
         [TestMethod]
         public void CanBeCancelledBy_AvecUtilisateurQuiAFaitLaReservation_RetourneVrai()
         {
+            // Arrange
+            // La réservation a été créée par _utilisateurNormal dans TestInitialize
 
             // Act
             var resultat = _reservation.CanBeCancelledBy(_utilisateurNormal);
@@ -53,6 +55,8 @@ namespace EvaluationSampleCode.UnitTests
         [TestMethod]
         public void CanBeCancelledBy_AvecAutreUtilisateurNonAdmin_RetourneFaux()
         {
+            // Arrange
+            // La réservation a été créée par _utilisateurNormal, on teste avec un autre utilisateur
 
             // Act
             var resultat = _reservation.CanBeCancelledBy(_autreUtilisateur);
