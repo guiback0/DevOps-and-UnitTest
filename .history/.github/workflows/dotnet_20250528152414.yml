@@ -59,30 +59,23 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: 8.0.x
-    - name: Restore dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build --no-restore
-    - name: Test MathOperationsTests
-      run: dotnet test --no-build --verbosity normal --filter "FullyQualifiedName~EvaluationSampleCode.UnitTests.MathOperationsTests"
+      - uses: actions/checkout@v4
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - name: Restore dependencies
+        run: dotnet restore
+      - name: Build
+        run: dotnet build --no-restore
+      - name: Test MathOperationsTests
+        run: dotnet test --no-build --verbosity normal --filter "FullyQualifiedName~EvaluationSampleCode.UnitTests.MathOperationsTests"
 
   test-reservation:
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: dotnet
     steps:
-    - uses: actions/checkout@v4
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: 8.0.x
-    - name: Restore dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build --no-restore
-    - name: Test ReservationTests
-      run: dotnet test --no-build --verbosity normal --filter "FullyQualifiedName~EvaluationSampleCode.UnitTests.ReservationTests"
+      - uses: actions/checkout@v4
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
