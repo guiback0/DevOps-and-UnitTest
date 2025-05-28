@@ -77,7 +77,7 @@ namespace EvaluationSampleCode.UnitTests
         #region Reservation Tests
 
         [TestMethod]
-        public void Reservation_AvecUtilisateur_InitialiseMadeByCorrectement()
+        public void Constructor_AvecUtilisateur_InitialiseMadeByCorrectement()
         {
             // Arrange
             var utilisateur = new User { IsAdmin = false };
@@ -90,7 +90,7 @@ namespace EvaluationSampleCode.UnitTests
         }
 
         [TestMethod]
-        public void Reservation_AvecUtilisateurAdmin_InitialiseMadeByCorrectement()
+        public void Constructor_AvecUtilisateurAdmin_InitialiseMadeByCorrectement()
         {
             // Arrange
             var utilisateurAdmin = new User { IsAdmin = true };

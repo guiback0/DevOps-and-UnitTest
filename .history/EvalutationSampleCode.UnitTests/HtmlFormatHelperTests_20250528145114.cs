@@ -110,6 +110,20 @@ namespace EvaluationSampleCode.UnitTests
         }
 
         [TestMethod]
+        public void GetItalicFormat_AvecContenuWorld_RetourneContenuEnItalique()
+        {
+            // Arrange
+            string contenu = "World";
+            string resultatAttendu = "<i>World</i>";
+
+            // Act
+            var resultat = _htmlFormatHelper.GetItalicFormat(contenu);
+
+            // Assert
+            Assert.AreEqual(resultatAttendu, resultat);
+        }
+
+        [TestMethod]
         public void GetItalicFormat_AvecContenuVide_RetourneContenuEnItalique()
         {
             // Arrange

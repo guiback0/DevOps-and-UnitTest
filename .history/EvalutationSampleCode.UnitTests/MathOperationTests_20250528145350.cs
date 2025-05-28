@@ -46,6 +46,7 @@ namespace EvaluationSampleCode.UnitTests
         [DataRow(10, -2, -5.0f)]
         public void Divide_AvecDeuxNombresValides_RetourneLaDivision(int nombreUn, int nombreDeux, float resultatAttendu)
         {
+            
 
             // Act
             var resultat = _mathOperations.Divide(nombreUn, nombreDeux);

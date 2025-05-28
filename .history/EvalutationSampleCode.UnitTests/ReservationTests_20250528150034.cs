@@ -90,7 +90,7 @@ namespace EvaluationSampleCode.UnitTests
         }
 
         [TestMethod]
-        public void Reservation_AvecUtilisateurAdmin_InitialiseMadeByCorrectement()
+        public void Constructor_AvecUtilisateurAdmin_InitialiseMadeByCorrectement()
         {
             // Arrange
             var utilisateurAdmin = new User { IsAdmin = true };
