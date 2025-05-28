@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 using EvaluationSampleCode;
 
-namespace EvaluationSampleCode.UnitTests
+namespace EvaluationSampleCode.Tests
 {
     [TestClass]
     public class ReservationTests
@@ -23,8 +23,6 @@ namespace EvaluationSampleCode.UnitTests
             _autreUtilisateur = new User { IsAdmin = false };
             _reservation = new Reservation(_utilisateurNormal);
         }
-
-        #region CanBeCancelledBy Tests
 
         [TestMethod]
         public void CanBeCancelledBy_AvecUtilisateurQuiAFaitLaReservation_RetourneVrai()
@@ -78,10 +76,6 @@ namespace EvaluationSampleCode.UnitTests
             Assert.IsTrue(resultat);
         }
 
-        #endregion
-
-        #region Constructor Tests
-
         [TestMethod]
         public void Constructor_AvecUtilisateur_InitialiseMadeByCorrectement()
         {
@@ -108,10 +102,6 @@ namespace EvaluationSampleCode.UnitTests
             Assert.AreEqual(utilisateurAdmin, reservation.MadeBy);
         }
 
-        #endregion
-
-        #region MadeBy Property Tests
-
         [TestMethod]
         public void MadeBy_ProprieteSet_ModifieLUtilisateur()
         {
@@ -124,7 +114,5 @@ namespace EvaluationSampleCode.UnitTests
             // Assert
             Assert.AreEqual(nouvelUtilisateur, _reservation.MadeBy);
         }
-
-        #endregion
     }
 }

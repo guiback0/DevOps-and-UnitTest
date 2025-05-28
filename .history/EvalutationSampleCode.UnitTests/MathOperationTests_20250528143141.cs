@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 using EvaluationSampleCode;
 
-namespace EvaluationSampleCode.UnitTests
+namespace EvaluationSampleCode.UnitTestsTests
 {
     [TestClass]
     public class MathOperationsTests
