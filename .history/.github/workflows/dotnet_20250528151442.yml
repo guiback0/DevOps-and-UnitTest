@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: dotnet
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Setup .NET
@@ -25,7 +25,7 @@ jobs:
 
   test-custom-stack:
     needs: build
-    runs-on: dotnet
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Setup .NET
@@ -41,7 +41,7 @@ jobs:
 
   test-html-format-helper:
     needs: build
-    runs-on: dotnet
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Setup .NET
@@ -57,7 +57,7 @@ jobs:
 
   test-math-operations:
     needs: build
-    runs-on: dotnet
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Setup .NET
@@ -73,7 +73,7 @@ jobs:
 
   test-reservation:
     needs: build
-    runs-on: dotnet
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Setup .NET
